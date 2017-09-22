@@ -9,6 +9,5 @@ Originally I created this tool to give developers the ability to peer into the H
 Recently I added a major enhancement which allows the user to inject an external Javascript library dynamically, and then peer into the properties, objects, and functions within that library.
 
 ### Links
-Website: [http://hunterj.hostjava.net/?c=projects&p=javascript](http://hunterj.hostjava.net/?c=projects&p=javascript)
-
+Website: [http://hunterj.hostjava.net/?c=projects&p=javascript](http://hunterj.hostjava.net/?c=projects&p=javascript)  
 Demo: [http://hunterj.hostjava.net/dynamic-dom-viewer.html](http://hunterj.hostjava.net/dynamic-dom-viewer.html).
