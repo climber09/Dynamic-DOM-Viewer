@@ -32,6 +32,7 @@ dd{margin-left: 1em;}
     padding: 0 0 20px 20px;
     spacing: 0;
     width:600px;
+    border-radius: 8px;
 }
 .srcInputBox {
     color:#999;
@@ -149,10 +150,6 @@ dd{margin-left: 1em;}
         }
         return false;
     }
-
-    var modalPlane = null;
-    var openBtn = null;
-    var closeBtn = null;
 
     function showDialog() {
         document.getElementById("srcInput").value = srcInputHint;
