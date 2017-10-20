@@ -23,7 +23,7 @@ dd{margin-left: 1em;}
     height: 100%;
     overflow: auto;
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.5);
 }
 .codeSrcBox {
     background-color: #fefefe;
@@ -262,6 +262,11 @@ dd{margin-left: 1em;}
         this.closeBtn.onclick = hideDialog;
         window.onclick = function(e){
             if (e.target == this.modalPane) {
+                hideDialog();
+            }
+        };
+        window.onkeyup = function(e){
+            if(e.keyCode == 27){
                 hideDialog();
             }
         };
