@@ -9,5 +9,5 @@ Originally I created this tool to make it easy to peer into the HTML DOM of any 
 Recently I added a major enhancement which allows the user to load an external Javascript library dynamically, and then peer into the properties, objects, and functions within that library.
 
 ### Links
-Website: [http://hunterj.hostjava.net/?c=projects&p=javascript](http://hunterj.hostjava.net/?c=projects&p=javascript)  
-Demo: [http://hunterj.hostjava.net/dynamic-dom-viewer.html](http://hunterj.hostjava.net/dynamic-dom-viewer.html)  
+Website: [http://hunterjdev.com/blog/dynamic-dom-viewer/](http://hunterjdev.com/blog/dynamic-dom-viewer/)  
+Demo: [http://hunterjdev.com/dynamic-dom-viewer.html](http://hunterjdev.com/dynamic-dom-viewer.html)  
