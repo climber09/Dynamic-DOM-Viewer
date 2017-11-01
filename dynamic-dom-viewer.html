@@ -153,11 +153,11 @@ dd{margin-left: 1em;}
 
     function showDialog() {
         document.getElementById("srcInput").value = srcInputHint;
-        modalPane.style.display = "block";
+        document.getElementById("modalPane").style.display = "block";
     }
 
     function hideDialog() {
-            modalPane.style.display = "none";
+        document.getElementById("modalPane").style.display = "none";
     }
 
     function collapseElement(currentId){
@@ -225,10 +225,11 @@ dd{margin-left: 1em;}
         return false;
     }
 
+    // file and http(s) protocols are valid sources
     var validSrcPat = /^(file\:\/\/\/|https?\:\/\/)[^\s\.\?\#\%\/\\]+.*$/;
+    
     function loadCodeSrc(srcUrl) {
         var inError = 0;
-        // file and http(s) protocols are valid
         if (srcUrl && srcUrl.match(validSrcPat)) {
             var scriptTag = document.createElement("script");
             scriptTag.setAttribute("type", "text/javascript");
@@ -255,11 +256,8 @@ dd{margin-left: 1em;}
     }
 
     function init() {
-        this.modalPane = document.getElementById("modalPane");
-        this.openBtn = document.getElementById("openBtn");
-        this.closeBtn = document.getElementById("closeBtn");
-        this.openBtn.onclick = showDialog;
-        this.closeBtn.onclick = hideDialog;
+        document.getElementById("openBtn").onclick = showDialog;
+        document.getElementById("closeBtn").onclick = hideDialog;
         window.onclick = function(e){
             if (e.target == this.modalPane) {
                 hideDialog();
