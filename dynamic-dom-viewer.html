@@ -82,6 +82,8 @@ dd{margin-left: 1em;}
     var elementCount = 0;
     var loadedCodeSet = (window.Set)? new Set(): null;
     var srcInputHint = "Enter Javascript URL";
+    var srcInputObj;
+    var modalPaneObj;
 
     function createElementHtml(currentElement, val){
         var elementHtml = document.createElement("dl");
@@ -152,12 +154,12 @@ dd{margin-left: 1em;}
     }
 
     function showDialog() {
-        document.getElementById("srcInput").value = srcInputHint;
-        document.getElementById("modalPane").style.display = "block";
+        srcInputObj.value = srcInputHint;
+        modalPaneObj.style.display = "block";
     }
 
     function hideDialog() {
-        document.getElementById("modalPane").style.display = "none";
+        modalPaneObj.style.display = "none";
     }
 
     function collapseElement(currentId){
@@ -251,15 +253,17 @@ dd{margin-left: 1em;}
             }
             document.getElementsByTagName("head")[0].appendChild(scriptTag);
         }else{
-            document.getElementById("srcInput").value = srcInputHint;
+            srcInputObj.value = srcInputHint;
         }
     }
 
     function init() {
+        modalPaneObj = document.getElementById("modalPane");
+        srcInputObj = document.getElementById("srcInput");        
         document.getElementById("openBtn").onclick = showDialog;
         document.getElementById("closeBtn").onclick = hideDialog;
         window.onclick = function(e){
-            if (e.target == this.modalPane) {
+            if (e.target == modalPaneObj) {
                 hideDialog();
             }
         };
